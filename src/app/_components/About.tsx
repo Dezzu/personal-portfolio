@@ -28,9 +28,10 @@ export default function About() {
           <p className="mb-6 text-lg">
             Come <span className="text-blue-100">Tech Leader</span>, guido i
             team di sviluppo garantendo best practice, flussi di lavoro
-            efficienti e soluzioni all'avanguardia. Sono sempre alla ricerca di
-            nuove tecnologie per migliorare il mio bagaglio di competenze e
-            rimanere aggiornato sulle ultime innovazioni del settore.
+            efficienti e soluzioni all&apos;avanguardia. Sono sempre alla
+            ricerca di nuove tecnologie per migliorare il mio bagaglio di
+            competenze e rimanere aggiornato sulle ultime innovazioni del
+            settore.
           </p>
           <p className="mb-6 text-lg">
             Oltre al coding, mi appassiona{" "}

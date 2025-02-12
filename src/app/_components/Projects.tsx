@@ -14,6 +14,14 @@ const projects = [
     tags: ["Java", "Spring Boot", "PostgreSQL", "Angular", "PrimeNG"],
     showMore: false,
   },
+  {
+    id: 2,
+    title: "Template Applicazione",
+    description:
+      "Template per la realizzazione di applicazioni fullstack con Spring Boot e Angular. Include funzionalità di autenticazione, autorizzazione, gestione degli utenti e delle risorse, e un'interfaccia utente moderna e responsive. Pronto per essere personalizzato e utilizzato in nuovi progetti",
+    tags: ["Java", "Spring Boot", "PostgreSQL", "Angular", "PrimeNG"],
+    showMore: true,
+  },
 ];
 
 export default function Projects() {
