@@ -18,13 +18,13 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         className="z-10 px-4 text-center"
       >
-        <h1 className="mb-10 text-9xl font-bold sm:text-5xl">
+        <h1 className="mb-5 text-6xl font-bold sm:text-7xl md:mb-10">
           Trasformo le tue idee,{" "}
           <span className="text-blue-100">nella loro forma migliore!</span>
         </h1>
         <TextGenerateEffect
           words={motivationalWords}
-          className="mx-auto max-w-2xl text-lg sm:text-xl"
+          className="mx-auto max-w-2xl text-lg sm:text-2xl"
         />
       </motion.div>
       <BackgroundBeams />
