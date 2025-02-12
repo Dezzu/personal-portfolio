@@ -1,32 +1,28 @@
-import "~/styles/globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import type React from "react"; // Import React
 
-import { GeistSans } from "geist/font/sans";
-import { type Metadata } from "next";
-
-import { TRPCReactProvider } from "~/trpc/react";
-import { ThemeProvider } from "./provider";
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Fabio De Zuani's Portfolio",
-  description: "Personal Fabio De Zuani's fantastic portfolio",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  title: "Portfolio di Fabio",
+  description: "Benvenuto nel mio portfolio",
+  generator: "Fabio",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" className={`${GeistSans.variable}`}>
-      <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <TRPCReactProvider>{children}</TRPCReactProvider>
-        </ThemeProvider>
+    <html lang="it" className="dark">
+      <body className={`${inter.className} bg-gray-900 text-white`}>
+        {children}
       </body>
     </html>
   );
 }
+
+import "./globals.css";
