@@ -19,10 +19,11 @@ export default function RootLayout({
   return (
     <html lang="it" className="dark">
       <body className={`${inter.className} bg-gray-900 text-white`}>
-        {children}
+        <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>
     </html>
   );
 }
 
 import "./globals.css";
+import { TRPCReactProvider } from "~/trpc/react";
