@@ -17,7 +17,7 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { api } from "~/trpc/react";
-import { useToast } from "@/src/hooks/use-toast";
+import { useToast } from "~/hooks/use-toast";
 
 function Contacts() {
   const emailMutation = api.email.sendEmail.useMutation();
