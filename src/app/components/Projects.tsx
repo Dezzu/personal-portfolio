@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
@@ -13,6 +13,7 @@ const projects = [
     image: "/VidiaGestionale.png",
     tags: ["Java", "Spring Boot", "PostgreSQL", "Angular", "PrimeNG"],
     showMore: false,
+    link: "",
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ const projects = [
       "Template per la realizzazione di applicazioni fullstack con Spring Boot e Angular. Include funzionalità di autenticazione, autorizzazione, gestione degli utenti e delle risorse, e un'interfaccia utente moderna e responsive. Pronto per essere personalizzato e utilizzato in nuovi progetti",
     tags: ["Java", "Spring Boot", "PostgreSQL", "Angular", "PrimeNG"],
     showMore: true,
+    link: "https://github.com/Dezzu/full-stack-app-template",
   },
 ];
 
@@ -37,8 +39,9 @@ export default function Projects() {
               key={project.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="overflow-hidden rounded-lg bg-gray-900 shadow-lg"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2, delay: index * 0.1 }}
+              className="overflow-hidden rounded bg-gray-900 shadow-lg"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
@@ -48,13 +51,15 @@ export default function Projects() {
                   alt={project.title}
                   className="h-48 w-full object-cover"
                 />
-                {hoveredIndex === index && project.showMore && (
-                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75">
-                    <button className="flex items-center space-x-2 rounded-full bg-primary px-4 py-2 text-white transition-colors hover:bg-primary/80">
-                      <span>Scopri di più</span>
-                      <ArrowRight size={16} />
-                    </button>
-                  </div>
+                {project.showMore && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute right-2 top-2 transform rounded-full bg-gray-700 p-1 transition-transform duration-300 ease-in-out"
+                  >
+                    <ArrowUpRight size={24} className="text-white" />
+                  </a>
                 )}
               </div>
               <div className="p-6">

@@ -2,13 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-
-const navItems = [
-  { name: "Home", href: "#home" },
-  { name: "Chi sono", href: "#about" },
-  { name: "CV", href: "#cv" },
-  { name: "Progetti", href: "#projects" },
-];
+import Link from "next/link";
+import { navItems } from "~/lib/const";
+import { handleClick } from "~/lib/utils";
 
 export default function Navigation() {
   const [activeSection, setActiveSection] = useState("");
@@ -40,8 +36,9 @@ export default function Navigation() {
       <ul className="flex justify-center space-x-4 p-4">
         {navItems.map((item) => (
           <li key={item.name}>
-            <a
+            <Link
               href={item.href}
+              onClick={(event) => handleClick(event, item.href)}
               className={`text-sm font-medium transition-colors hover:text-primary ${
                 activeSection === item.href.slice(1)
                   ? "text-primary"
@@ -57,7 +54,7 @@ export default function Navigation() {
                   transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 />
               )}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

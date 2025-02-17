@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    title: "Tech Leader - Sviluppo interno",
+    title: "Tech Leader",
     company: "Consoft Informatica",
     period: "23/06/2021 - Present",
     description:
       "Ricopro la posizione di tech leader per progetti aziendali, mi occupo della selezione tecnologica e della gestione delle risorse per il completamento dell'attività. Mi occupo anche della ricerca e selezione tecnica dei candidati da introdurre all'interno della struttura aziendale.",
   },
   {
-    title: "Sviluppatore Backend - Consulenza",
+    title: "Sviluppatore Backend",
     company: "Consoft Informatica - IGT",
     period: "23/06/2021 - 01/09/2024",
     description:
@@ -57,7 +57,7 @@ const skills = [
 export default function CV() {
   return (
     <section id="cv" className="bg-gray-900 py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6">
         <h2 className="mb-10 text-center text-3xl font-bold">
           Curriculum Vitae
         </h2>
