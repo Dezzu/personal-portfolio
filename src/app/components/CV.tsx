@@ -8,14 +8,14 @@ const experiences = [
     company: "Consoft Informatica",
     period: "23/06/2021 - Present",
     description:
-      "Ricopro la posizione di tech leader per progetti aziendali, mi occupo della selezione tecnologica e della gestione delle risorse per il completamento dell'attività. Mi occupo anche della ricerca e selezione tecnica dei candidati da introdurre all'interno della struttura aziendale.",
+      "Ricopro il ruolo di tech leader, gestendo la selezione tecnologica e delle risorse per i progetti aziendali. Mi occupo anche della ricerca e selezione dei candidati per l'azienda.",
   },
   {
     title: "Sviluppatore Backend",
-    company: "Consoft Informatica - IGT",
+    company: "IGT",
     period: "23/06/2021 - 01/09/2024",
     description:
-      "Lavoro in team e mediante la metodologia AGILE siamo in grado di distribuire software ogni sprint. Il progetto prevede lo sviluppo di un prodotto per la gestione del profilo, in ogni suo aspetto, di una piattaforma scommesse internazionale. Come sviluppatore mi sono occupato dell'analisi tecnica di funzionalità, redazione di documentazione e implementazione in ogni sua parte.",
+      "Lavoro in team seguendo la metodologia AGILE, permettendo di distribuire software ogni sprint. Il progetto riguarda lo sviluppo di un prodotto per la gestione del profilo su una piattaforma scommesse internazionale. Come sviluppatore, mi sono occupato dell'analisi tecnica, della redazione della documentazione e dell'implementazione delle funzionalità.",
   },
   {
     title: "Sviluppatore Web",

@@ -6,10 +6,13 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const handleClick = (
-  event: React.MouseEvent<HTMLAnchorElement>,
+  event: React.MouseEvent<HTMLAnchorElement> | null,
   href: string,
 ) => {
-  event.preventDefault();
+  if (event) {
+    event.preventDefault();
+  }
+
   const section = document.querySelector(href);
   if (section) {
     section.scrollIntoView({ behavior: "smooth" });

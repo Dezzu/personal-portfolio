@@ -1,13 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import Link from "next/link";
 import { navItems } from "~/lib/const";
 import { handleClick } from "~/lib/utils";
 
 export default function Navigation() {
   const [activeSection, setActiveSection] = useState("");
+  const { scrollYProgress } = useScroll();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,7 +33,11 @@ export default function Navigation() {
   }, []);
 
   return (
-    <nav className="fixed left-0 right-0 top-0 z-50 bg-gray-900 bg-opacity-80 backdrop-blur-sm">
+    <nav className="fixed left-0 right-0 top-0 z-50 bg-gray-900/80 backdrop-blur-sm">
+      <motion.div
+        className="h-1 w-full bg-slate-50/50"
+        style={{ scaleX: scrollYProgress }}
+      />{" "}
       <ul className="flex justify-center space-x-4 p-4">
         {navItems.map((item) => (
           <li key={item.name}>

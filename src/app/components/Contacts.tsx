@@ -18,6 +18,27 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { api } from "~/trpc/react";
 import { useToast } from "~/hooks/use-toast";
+import { Instagram } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+
+const SOCIALS = [
+  {
+    alt: "Profilo Instagram",
+    icon: "icons/instagram.svg",
+    link: null,
+  },
+  {
+    alt: "Profilo Youtube",
+    icon: "icons/youtube.svg",
+    link: null,
+  },
+  {
+    alt: "Profilo Github",
+    icon: "icons/github.svg",
+    link: null,
+  },
+];
 
 function Contacts() {
   const emailMutation = api.email.sendEmail.useMutation();
@@ -134,6 +155,21 @@ function Contacts() {
             </Button>
           </form>
         </Form>
+      </div>
+      <div className="mt-6 flex items-center justify-center gap-3">
+        {SOCIALS.filter((social) => social.link != null).map(
+          (social, index) => (
+            <Link href={social.link!} key={index} target="_blank">
+              <Image
+                src={social.icon}
+                width={36}
+                height={36}
+                alt={social.alt}
+                className="cursor-pointer"
+              ></Image>
+            </Link>
+          ),
+        )}
       </div>
     </div>
   );
