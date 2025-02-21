@@ -10,7 +10,7 @@ const projects = [
     title: "Gestionale Vidia",
     description:
       "Gestionale online privato con autenticazione per la gestione di un business. Le funzionalità principali includono la gestione dei clienti, dei prodotti, degli ordini e delle commesse per una gestione migliore delle risorse. L'accesso è riservato solo agli utenti autorizzati",
-    image: "/VidiaGestionale.png",
+    image: "/projects/VidiaGestionale.png",
     tags: ["Java", "Spring Boot", "PostgreSQL", "Angular", "PrimeNG"],
     showMore: false,
     link: "",
@@ -47,7 +47,7 @@ export default function Projects() {
             >
               <div className="relative">
                 <img
-                  src={project.image || "/placeholder.svg"}
+                  src={project.image || "/placeholders/placeholder.svg"}
                   alt={project.title}
                   className="h-48 w-full object-cover"
                 />

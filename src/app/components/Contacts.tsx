@@ -36,7 +36,12 @@ const SOCIALS = [
   {
     alt: "Profilo Github",
     icon: "icons/github.svg",
-    link: null,
+    link: "https://github.com/Dezzu",
+  },
+  {
+    alt: "Profilo Linkedin",
+    icon: "icons/linkedin.svg",
+    link: "https://www.linkedin.com/in/fabio-de-zuani/",
   },
 ];
 
