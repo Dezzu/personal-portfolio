@@ -5,6 +5,7 @@ import { TextGenerateEffect } from "./ui/text-generate-effect";
 import { BackgroundBeams } from "./ui/background-beams";
 import { Button } from "./ui/button";
 import { handleClick } from "~/lib/utils";
+import Image from "next/image";
 
 export default function Hero() {
   const motivationalWords = "Per progredire, bisogna innovare!";
@@ -20,6 +21,19 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         className="z-10 px-4 text-center"
       >
+        <div className="mb-3 flex w-full items-center justify-center">
+          <div
+            style={{ width: "200px", height: "200px" }}
+            className="relative flex items-center justify-center overflow-hidden rounded-full"
+          >
+            <Image
+              src="/profile.JPG"
+              width={200}
+              height={200}
+              alt="Fabio, il proprietario del sito con una camicia azzurra"
+            ></Image>
+          </div>
+        </div>
         <h1 className="mb-5 text-6xl font-bold sm:text-7xl md:mb-10">
           Trasformo le tue idee,{" "}
           <span className="text-blue-100">nella loro forma migliore!</span>
